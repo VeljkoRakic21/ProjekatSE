@@ -1,0 +1,84 @@
+.root {
+    -fx-background-color: #e5d2b8;
+    -fx-padding: 0px;
+}
+
+.synopsis-box {
+    -fx-background-color: rgba(0, 0, 0, 0.1); /* Very transparent black */
+    -fx-padding: 10px 0 20px 0;
+    -fx-border-color: transparent;
+    -fx-max-width: 240px; /* Set maximum width */
+    -fx-alignment: center; /* Center-align content */
+}
+
+.rent-button {
+    -fx-background-color: #673147; /* Dark blue button background */
+    -fx-text-fill: white; /* White text color */
+    -fx-font-size: 18pt; /* Font size */
+}
+
+.navigation-bar {
+    -fx-background-color: #673147;
+    -fx-padding: 10px;
+}
+
+.navigation-button {
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-min-width: 30px; /* Minimum width for the buttons */
+}
+
+.navigation-button#search-button {
+    -fx-background-image: url("loop.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 30px 30px;
+    -fx-background-position: center;
+    -fx-min-height: 30px; /* Minimum height for the buttons */
+}
+
+.navigation-button#recommended-button {
+    -fx-background-image: url("star.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 30px 30px;
+    -fx-background-position: center;
+    -fx-min-height: 30px; /* Minimum height for the buttons */
+}
+
+.navigation-button#history-button {
+    -fx-background-image: url("bookmark.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 26px 26px;
+    -fx-background-position: center;
+    -fx-min-height: 30px; /* Minimum height for the buttons */
+}
+
+.navigation-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Adjust the padding between buttons */
+.navigation-button#search-button {
+    -fx-padding: 0 100px 0 0; /* Add right padding */
+}
+
+.navigation-button#recommended-button {
+    -fx-padding: 0 100px; /* Add left and right padding */
+}
+
+.navigation-button#history-button {
+    -fx-padding: 0 0 0 100px; /* Add left padding */
+}
+
+.rent-button {
+    -fx-background-color: #673147; /* Dark blue button background */
+    -fx-text-fill: white; /* White text color */
+    -fx-font-size: 18pt; /* Font size */
+}
+
+
+
+
+
+
