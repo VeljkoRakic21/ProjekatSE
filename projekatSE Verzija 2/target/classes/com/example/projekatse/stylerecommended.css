@@ -1,0 +1,95 @@
+.root {
+    -fx-background-color: #e5d2b8;
+    -fx-padding: 0px;
+}
+
+.recommended-message {
+    -fx-text-fill: #673147;
+    -fx-font-size: 30px;
+}
+
+.genre-button, .rating-button {
+    -fx-background-color: #673147;
+    -fx-text-fill: white;
+    -fx-font-size: 12pt;
+}
+
+.book-item-box {
+    -fx-background-color: #673147; /* Background color for rent item box */
+    -fx-padding: 12px; /* Padding around the rent item box */
+    -fx-font-size: 17px;
+}
+
+.book-item-details {
+    -fx-font-size: 17px; /* Font size for rent item details */
+}
+
+.image-view {
+    -fx-border-color: #000000; /* Border color for the image view */
+    -fx-border-width: 1px; /* Border width for the image view */
+}
+
+.genre-title{
+    -fx-font-size: 25px;
+    -fx-text-fill: black;
+}
+
+.navigation-bar {
+    -fx-background-color: #673147;
+    -fx-padding: 10px;
+}
+
+.navigation-button {
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-min-width: 30px; /* Minimum width for the buttons */
+}
+
+.navigation-button#search-button {
+    -fx-background-image: url("loop.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 30px 30px;
+    -fx-background-position: center;
+    -fx-min-height: 30px; /* Minimum height for the buttons */
+}
+
+.navigation-button#recommended-button {
+    -fx-background-image: url("star.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 30px 30px;
+    -fx-background-position: center;
+    -fx-min-height: 30px; /* Minimum height for the buttons */
+}
+
+.navigation-button#history-button {
+    -fx-background-image: url("bookmark.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 26px 26px;
+    -fx-background-position: center;
+    -fx-min-height: 30px; /* Minimum height for the buttons */
+}
+
+.navigation-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Adjust the padding between buttons */
+.navigation-button#search-button {
+    -fx-padding: 0 100px 0 0; /* Add right padding */
+}
+
+.navigation-button#recommended-button {
+    -fx-padding: 0 100px; /* Add left and right padding */
+}
+
+.navigation-button#history-button {
+    -fx-padding: 0 0 0 100px; /* Add left padding */
+}
+
+
+
+
+
+

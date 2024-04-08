@@ -1,0 +1,80 @@
+.root {
+    -fx-background-color: #e5d2b8;
+    -fx-background-image: url("book.png");
+    -fx-background-size: cover; /* Adjust as needed */
+    -fx-background-position: center; /* Adjust as needed */
+    -fx-background-repeat: repeat; /* Adjust as needed */
+    -fx-padding: 0px;
+}
+
+.welcome-message {
+    -fx-font-size: 25px; /* Increase font size */
+    -fx-font-family: "Arial";
+    -fx-text-fill: #673147;
+
+}
+
+.search-bar {
+    -fx-prompt-text-fill: #999999;
+    -fx-font-family: "Arial";
+    -fx-padding: 5px;
+}
+
+.navigation-bar {
+    -fx-background-color: #673147;
+    -fx-padding: 10px;
+}
+
+.navigation-button {
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-min-width: 30px; /* Minimum width for the buttons */
+}
+
+.navigation-button#search-button {
+    -fx-background-image: url("loop.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 30px 30px;
+    -fx-background-position: center;
+    -fx-min-height: 30px; /* Minimum height for the buttons */
+}
+
+.navigation-button#recommended-button {
+    -fx-background-image: url("star.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 30px 30px;
+    -fx-background-position: center;
+    -fx-min-height: 30px; /* Minimum height for the buttons */
+}
+
+.navigation-button#history-button {
+    -fx-background-image: url("bookmark.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 26px 26px;
+    -fx-background-position: center;
+    -fx-min-height: 30px; /* Minimum height for the buttons */
+}
+
+.navigation-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Adjust the padding between buttons */
+.navigation-button#search-button {
+    -fx-padding: 0 100px 0 0; /* Add right padding */
+}
+
+.navigation-button#recommended-button {
+    -fx-padding: 0 100px; /* Add left and right padding */
+}
+
+.navigation-button#history-button {
+    -fx-padding: 0 0 0 100px; /* Add left padding */
+}
+
+
+
+
+

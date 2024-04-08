@@ -1,0 +1,97 @@
+.root {
+    -fx-background-color: #e5d2b8; /* Background color for the root pane */
+    -fx-padding: 0px; /* Padding for the root pane */
+}
+
+.history-message{
+    -fx-font-size: 50px;
+    -fx-padding: 30px 0 30px 0; /* Add left padding */
+    -fx-alignment: center;
+    -fx-text-fill: #673147; /* Set text color to #673147 */
+}
+
+.rent-item-box {
+    -fx-background-color: #673147; /* Background color for rent item box */
+    -fx-padding: 17px; /* Padding around the rent item box */
+}
+
+.rent-item-details {
+    -fx-font-size: 13px; /* Font size for rent item details */
+}
+
+.image-view {
+    -fx-border-color: #000000; /* Border color for the image view */
+    -fx-border-width: 1px; /* Border width for the image view */
+}
+
+.combobox {
+    -fx-background-color: #e5d2b8;
+}
+
+.rate-button {
+    -fx-background-color: #e5d2b8;
+}
+
+.right-box{
+     -fx-padding: 90px 0 0 120px; /* Add left padding */
+
+}
+
+.navigation-bar {
+    -fx-background-color: #673147;
+    -fx-padding: 10px;
+}
+
+.navigation-button {
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-min-width: 30px; /* Minimum width for the buttons */
+}
+
+.navigation-button#search-button {
+    -fx-background-image: url("loop.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 30px 30px;
+    -fx-background-position: center;
+    -fx-min-height: 30px; /* Minimum height for the buttons */
+}
+
+.navigation-button#recommended-button {
+    -fx-background-image: url("star.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 30px 30px;
+    -fx-background-position: center;
+    -fx-min-height: 30px; /* Minimum height for the buttons */
+}
+
+.navigation-button#history-button {
+    -fx-background-image: url("bookmark.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 26px 26px;
+    -fx-background-position: center;
+    -fx-min-height: 30px; /* Minimum height for the buttons */
+}
+
+.navigation-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Adjust the padding between buttons */
+.navigation-button#search-button {
+    -fx-padding: 0 100px 0 0; /* Add right padding */
+}
+
+.navigation-button#recommended-button {
+    -fx-padding: 0 100px; /* Add left and right padding */
+}
+
+.navigation-button#history-button {
+    -fx-padding: 0 0 0 100px; /* Add left padding */
+}
+
+
+
+
+
