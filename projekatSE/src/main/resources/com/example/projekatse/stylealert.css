@@ -1,0 +1,16 @@
+.root {
+    -fx-background-color: #e5d2b8 ; /* Dark blue background */
+    -fx-text-fill: white; /* White text color */
+}
+
+.button {
+    -fx-background-color: #673147; /* Dark blue button background */
+    -fx-text-fill: white; /* White text color */
+    -fx-font-size: 12pt; /* Font size */
+}
+
+.text {
+    -fx-text-fill: white;
+}
+
+
