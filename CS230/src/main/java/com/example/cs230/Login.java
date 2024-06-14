@@ -25,21 +25,23 @@ public class Login {
     private Orchestrator orchestrator;
 
     @FXML
-    public void handleLogin() {
+    public void handleLogin() throws SQLException {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
-        if (validateLogin(username, password)) {
+        int userId = validateLogin(username, password);
+        if (userId != -1) {
             System.out.println("Login successful!");
-            String token = JwtUtil.generateToken(username); // Generisanje tokena
+            String token = JwtUtil.generateToken(username, userId); // Generate token with username and userId
             loadMainWindow(token);
         } else {
             System.out.println("Invalid username or password.");
         }
     }
 
-    private boolean validateLogin(String username, String password) {
-        String query = "SELECT * FROM Users WHERE username = ? AND password_hash = ?";
+    private int validateLogin(String username, String password) {
+        String query = "SELECT user_id FROM Users WHERE username = ? AND password_hash = ?";
+        int userId = -1;
 
         try (Connection conn = Database.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(query)) {
@@ -48,13 +50,14 @@ public class Login {
             pstmt.setString(2, password);
 
             ResultSet rs = pstmt.executeQuery();
-
-            return rs.next();
+            if (rs.next()) {
+                userId = rs.getInt("user_id");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return false;
+        return userId;
     }
 
     private void loadMainWindow(String token) {

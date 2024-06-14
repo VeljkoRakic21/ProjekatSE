@@ -13,6 +13,33 @@ public class Database {
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 
+    public static void saveUserSession(int userId, String token) throws SQLException {
+        String query = "INSERT INTO UserSessions (user_id, token, expires_at) VALUES (?, ?, ?)";
+
+        try (Connection conn = getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(query)) {
+
+            pstmt.setInt(1, userId);
+            pstmt.setString(2, token);
+            pstmt.setTimestamp(3, new Timestamp(System.currentTimeMillis() + 86400000)); // 1 day
+            pstmt.executeUpdate();
+        }
+    }
+
+    public static boolean isValidSession(String token) throws SQLException {
+        String query = "SELECT * FROM UserSessions WHERE token = ? AND expires_at > CURRENT_TIMESTAMP";
+
+        try (Connection conn = getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(query)) {
+
+            pstmt.setString(1, token);
+            ResultSet rs = pstmt.executeQuery();
+            return rs.next();
+        }
+    }
+
+    // Existing methods...
+
     public int updateFileInfo(String username, String fileName, String accessControl, String serverId) {
         String query = "INSERT INTO Files (username, file_name, access_control, server_id) VALUES (?, ?, ?, ?) " +
                 "ON DUPLICATE KEY UPDATE access_control = VALUES(access_control), server_id = VALUES(server_id)";
