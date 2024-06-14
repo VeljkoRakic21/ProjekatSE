@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cs230.MainWindow">
+    <children>
+        <Button fx:id="uploadButton" text="Upload" onAction="#handleUpload"/>
+        <Button fx:id="downloadButton" text="Download" onAction="#handleDownload"/>
+        <Button fx:id="deleteButton" text="Delete" onAction="#handleDelete"/>
+        <Button fx:id="viewButton" text="View Files" onAction="#handleView"/>
+        <ListView fx:id="fileList"/>
+    </children>
+    <VBox.margin>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </VBox.margin>
+</VBox>
+
+
+
+
+
+
+
+

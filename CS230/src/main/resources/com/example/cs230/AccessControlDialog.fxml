@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane fx:controller="com.example.cs230.AccessControlDialogController"
+          xmlns:fx="http://javafx.com/fxml"
+          alignment="center" hgap="10" vgap="10">
+    <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+
+    <CheckBox fx:id="viewCheckBox" text="View" GridPane.rowIndex="0"/>
+    <CheckBox fx:id="deleteCheckBox" text="Delete" GridPane.rowIndex="1"/>
+    <CheckBox fx:id="downloadCheckBox" text="Download" GridPane.rowIndex="2"/>
+
+    <Button text="Save" onAction="#handleSave" GridPane.rowIndex="3"/>
+    <Button text="Cancel" onAction="#handleCancel" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+</GridPane>
+
